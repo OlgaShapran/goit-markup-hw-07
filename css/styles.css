@@ -580,7 +580,7 @@ address {
 }
 /* ----------social------------- */
 .footer-social{
-    margin-right: 93px;
+    margin-right: auto;
 }
 .footer-text{
     font-family: var(--main-font);
@@ -661,6 +661,8 @@ address {
     color: var(--btn-txt-cl);
     background-color: var(--accent-txt-cl);
     transition: background-color var(--anim);
+    border: none;
+    border-radius: 4px;
 }
 
 .footer-button:hover,
@@ -787,9 +789,7 @@ address {
 }
 
 .form-group{
-
     margin-bottom: 20px;
-
 }
 
 
@@ -840,9 +840,7 @@ address {
 .form-input:focus,
 .form-input:active {
     border-color: var(--accent-txt-cl);
-
 }
-
 
 .form-icon{
     position: absolute;
@@ -853,14 +851,14 @@ address {
     transition: fill var(--anim);
 }
 
-.form-icon:focus,
-.form-icon:hover {
+.form-input:focus + .form-icon,
+.form-input:hover + .form-icon{
     fill: var(--accent-txt-cl);
 }
 
 .form-textarea {
     height: 120px;
-    resize: vertical;
+    resize: none;
     padding: 12px 16px;
 }
 /* checkbox */
