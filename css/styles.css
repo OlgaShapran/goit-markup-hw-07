@@ -83,7 +83,7 @@ address {
     align-items: center;
 }
 
-.header__nav {
+.nav {
     display: flex;
     align-items: center;
     margin-right: auto;
@@ -93,13 +93,16 @@ address {
     color: var(--accent-txt-cl);
 }
 
-.logo {
+.logo{
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 26px;
     line-height: calc(31 / 26);
     letter-spacing: 0.03em;
     color: var(--studio-txt-cl);
+}
+
+.header__logo {
     margin-right: 93px;
 }
 
@@ -169,7 +172,7 @@ address {
     color: var(--tel-txt-cl)
 }
 
-.header-icon{
+.contacts__icon{
     fill: currentColor;
     margin-right: 10px;
 }
@@ -177,23 +180,28 @@ address {
 .hero {
     background-color: var(--dark-bg-cl);
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)), url("../images/overlay.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 1600px;
-    max-height: 600px;
-    margin-left: auto;
-    margin-right: auto;
+
     border: 1px solid var(--studio-txt-cl);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.hero-title {
+.hero__container{
+    max-width: 1600px;
+    max-height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero__title {
     font-weight: 900;
     font-size: 44px;
     line-height: calc(60 / 44);
@@ -203,7 +211,7 @@ address {
     margin-bottom: 30px;
 }
 
-.hero-btn {
+.hero__btn {
     font-family: inherit;
     font-weight: 700;
     Font-size: 16px;
@@ -222,8 +230,8 @@ address {
     transition: color var(--anim), background-color var(--anim);
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
+.hero__btn:hover,
+.hero__btn:focus {
     color: var(--btn-txt-cl);
     background-color: var(--btn-bl-cl);
 }
@@ -242,11 +250,17 @@ address {
     overflow: hidden;
 }
 
-.plus-thumb{
+.plus__list {
+    display: flex;
+    gap: 30px;
+
+}
+
+.plus__thumb{
     margin-bottom: 30px;
 }
 
-.plus-icon-link{
+.plus__link{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -256,12 +270,7 @@ address {
     border-radius: 4px;
 }
 
-.plus-list {
-    display: flex;
-    gap: 30px;
-}
-
-.plus-subject {
+.plus__subject {
     font-weight: 700;
     font-size: 14px;
     line-height: calc(16 / 14);
@@ -271,7 +280,7 @@ address {
     margin-bottom: 10px;
 }
 
-.plus-text {
+.plus__text {
     font-weight: 400;
     font-size: 14px;
     line-height: calc(24 / 14);
@@ -284,9 +293,9 @@ address {
     padding-top: 0px;
 }
 
-.work-tittle,
-.team-tittle,
-.clients-tittle {
+.work__tittle,
+.team__tittle,
+.clients__tittle {
     font-weight: 700;
     font-size: 36px;
     line-height: calc(42 / 36);
@@ -296,16 +305,16 @@ address {
     margin-bottom: 50px;
 }
 
-.work-list {
+.work__list {
     display: flex;
     gap: 30px;
 }
 
-.work-item{
+.work__item{
     position: relative;
 }
 
-.work-text{
+.work__text{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -326,24 +335,24 @@ address {
     background-color:var(--team-bg-cl);
 }
 
-.team-list {
+.team__list {
     display: flex;
     gap: 30px;
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-item {
+.team__item {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--white-txt-cl);
 }
 
-.team-wrapper {
+.team__wrapper {
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.team-name {
+.team__name {
     font-weight: 500;
     font-size: 16px;
     line-height: calc(19 / 16);
@@ -353,7 +362,7 @@ address {
     margin-bottom: 10px;
 }
 
-.team-spec {
+.team__spec {
     font-weight: 400;
     font-size: 16px;
     line-height: calc(19 / 16);
@@ -363,20 +372,81 @@ address {
     margin-bottom: 16px;
 }
 
+/* ------social icons---------------- */
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--soc-cl);
+    border-radius: 50%;
+    transition: color var(--anim), background-color var(--anim);
+}
+
+.social__icon {
+    fill: currentColor;
+}
+
+.social__link:hover,
+.social__link:focus {
+    background-color: var(--accent-txt-cl);
+    color: var(--btn-txt-cl);
+}
+
+/* -------------clients----------- */
+.clients__list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.clients__link:focus,
+.clients__link:hover,
+.clients__link:active {
+    color: var(--accent-txt-cl);
+    border: 1px solid var(--accent-txt-cl);
+}
+
+.clients__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--soc-cl);
+    color: var(--soc-cl);
+    border-radius: 4px;
+    transition: color var(--anim), border var(--anim);
+}
+
+.clients__icon {
+    fill: currentColor;
+}
 /*--------------------- portfolio-------------- */
 
-.project-list-nav {
+.cat{
     display: flex;
     gap: 8px;
     justify-content: center;
+}
+
+.project__cat{
     margin-bottom: 50px;
 }
 
-.project-list-btn {
+.cat__list {
     align-items: center;
 }
 
-.project-btn {
+.cat__btn {
     font-family: inherit;
     font-weight: 500;
     Font-size: 16px;
@@ -392,50 +462,49 @@ address {
     transition: color var(--anim), background-color var(--anim), box-shadow var(--anim), border-radius var(--anim);
 }
 
-.project-btn:hover,
-.project-btn:focus {
+.cat__btn:hover,
+.cat__btn:focus {
     color: var(--white-txt-cl);
     background-color: var(--accent-txt-cl);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.active-btn,
-.project-btn:active {
+.cat__btn--active,
+.cat__btn:active {
     background-color: var(--accent-txt-cl);
 }
 
-.active-btn{
+.at__btn--active{
     color: var(--white-txt-cl);
     transform: var(--anim);
 }
 /*               projects------- */
-.project-list{
+.project__list{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     flex-basis: calc(100% - 30px * 2) / 3;
 }
 
-.project-image-overlay{
-    position: relative;
-    overflow: hidden;
-}
-
-.project-item:hover .project-overlay{
+.project__item:hover .project__overlay{
     transform: translateY(0);
 }
 
-.project-link{
+.project__link{
     display: block;
     transition: box-shadow var(--anim);
 }
 
-.project-link:hover,
-.project-link:focus {
+.project__link:hover,
+.project__link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-overlay{
+.project__image {
+    position: relative;
+    overflow: hidden;
+}
+.project__overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -447,7 +516,7 @@ address {
     transition: transform var(--anim);
 }
 
-.project-overlay-text{
+.project__text{
     text-align: left;
     font-family: var(--main-font);
     font-weight: 400;
@@ -459,7 +528,7 @@ address {
     height: 294px;
 }
 
-.project-content {
+.project__content {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;
@@ -468,12 +537,12 @@ address {
     transition: color var(--anim);
 }
 
-.project-content:hover,
-.project-content:focus{
+.project__content:hover,
+.project__content:focus{
     color: currentColor;
 }
 
-.project-subtitle {
+.project__subtitle {
     font-weight: 700px;
     font-size: 18px;
     line-height: calc(36 / 18);
@@ -482,63 +551,35 @@ address {
     margin-bottom: 4px;
 }
 
-.project-text {
+.project__desc {
     font-weight: 400;
     font-size: 16px;
     line-height: calc(30 / 16);
     letter-spacing: 0.03em;
     color: var(--tel-txt-cl);
 }
-/* -------------clients----------- */
-.clients-list{
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-}
 
-.clients-icon-link:focus,
-.clients-icon-link:hover,
-.clients-icon-link:active{
-    color: var(--accent-txt-cl);
-    border: 1px solid var(--accent-txt-cl);
-}
 
-.clients-icon-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 170px;
-    height: 92px;
-    border: 1px solid var(--soc-cl);
-    color: var(--soc-cl);
-    border-radius: 4px;
-    transition: color var(--anim), border var(--anim);
-}
-
-.plus-thumb-icon{
-    fill: currentColor;
-}
 /*-------------- footer------------- */
-.footer {
-    /* position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%; */
+.footer{
     background-color: var(--dark-bg-cl);
+}
+
+.footer__container{
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
-.footer-container {
+.footer__position {
     display: flex;
     align-items: baseline;
 }
 
-.footer-left{
+.footer__adress{
     margin-right: 70px;
 }
 
-.footer-link {
+.adress__link {
     Font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 26px;
@@ -550,15 +591,15 @@ address {
     display: block;
 }
 
-.footer-item:last-child {
+.adress__item:last-child {
     margin-bottom: 0;
 }
 
-.footer-item {
+.adress__item {
     margin-bottom: 9px;
 }
 
-.footer-adress, .footer-mail, .footer-tel{
+.adress__map, .adress__mail, .adress__tel{
     font-weight: 400;
     font-size: 14px;
     line-height: calc(24 / 14);
@@ -566,36 +607,37 @@ address {
     transition: color var(--anim);
 }
 
-.footer-adress {
+.adress__map {
     color: var(--white-txt-cl);
 }
 
-.footer-mail, .footer-tel {
+.adress__mail, .adress__tel {
     color: var(--footer-txt-cl);
 }
 
-.footer-adress:hover,
-.footer-adress:focus,
-.footer-mail:hover,
-.footer-mail:focus,
-.footer-tel:hover,
-.footer-tel:focus {
+.adress__map:hover,
+.adress__map:focus,
+.adress__mail:hover,
+.adress__mail:focus,
+.adress__tel:hover,
+.adress__tel:focus {
     color: var(--accent-txt-cl);
 }
 
-.footer-contacts {
+.adress__contacts {
     font-style: normal;
 }
 
-.footer-link > span {
+.adress__link > span {
     color: var(--white-txt-cl);
 }
 /* ----------social------------- */
-.footer-social{
+.footer__join{
     margin-right: auto;
 }
 
-.footer-text{
+.join__text,
+.subscribe__text{
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 14px;
@@ -606,13 +648,13 @@ address {
     margin-bottom: 20px;
 }
 
-.footer-icon{
+.join__list{
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.footer-social-link {
+.join__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -624,28 +666,28 @@ address {
     transition: background-color var(--anim);
 }
 
-.footer-social-icon {
+.join__icon {
     fill: currentColor;
 }
 
-.footer-social-link:hover,
-.footer-social-link:focus {
+.join__link:hover,
+.join__link:focus {
     background-color: var(--accent-txt-cl);
 }
 /* -- подпишитесь на рассылку --> */
 
-.footer-form{
+.subscribe__form{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
 }
 
-.footer-label{
+.subscribe__label{
     height: 50px;
 }
 
-.footer-email{
+.subscribe__email{
     display: block;
     height: 50px;
     width: 358px;
@@ -659,7 +701,7 @@ address {
     outline: transparent;
 }
 
-.footer-button{
+.subscribe__btn{
     display: inline-flex;
     gap: 10px;
     align-items: center;
@@ -678,38 +720,12 @@ address {
     border-radius: 4px;
 }
 
-.footer-button:hover,
-.footer-button:focus{
+.subscribe__btn:hover,
+.subscribe__btn:focus{
     background-color: var(--btn-bl-cl);
 }
 
-/* ------social icons---------------- */
-.team-social-list{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
 
-.team-social-link{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    color: var(--soc-cl);
-    border-radius: 50%;
-    transition: color var(--anim), background-color var(--anim);
-}
-
-.social-icon{
-    fill: currentColor;
-}
-
-.team-social-link:hover,
-.team-social-link:focus{
-    background-color: var(--accent-txt-cl);
-    color: var(--btn-txt-cl);
-}
 
 /* modal window */
 .backdrop{
@@ -758,8 +774,8 @@ address {
 .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(0.4) rotate(0.25turn);
     opacity: 0;
-
 }
+
 .modal-btn{
     position: absolute;
     top: 8px;
@@ -789,7 +805,7 @@ address {
     text-align: center;
 }
 
-.form-tittle {
+.form__tittle {
     display: block;
     font-family: var(--main-font);
     font-weight: 700;
@@ -801,21 +817,21 @@ address {
     margin-bottom: 12px;
 }
 
-.form-group{
+.form__group{
     margin-bottom: 20px;
 }
 
-.form-wrap{
+.form__wrap{
     position: relative;
     display: block;
     margin-bottom: 10px;
 }
 
-.form-wrap:last-child{
+.form__wrap:last-child{
     margin-bottom: 0;
 }
 
-.form-label-text{
+.form__label{
     display: block;
     text-align: left;
     margin-bottom: 4px;
@@ -827,7 +843,7 @@ address {
     color: var(--tel-txt-cl);
 }
 
-.form-input {
+.form__input {
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -848,12 +864,12 @@ address {
     outline: transparent;
 }
 
-.form-input:focus,
-.form-input:active {
+.form__input:focus,
+.form__input:active {
     border-color: var(--accent-txt-cl);
 }
 
-.form-icon{
+.form__icon{
     position: absolute;
 
     bottom: 11px;
@@ -862,19 +878,19 @@ address {
     transition: fill var(--anim);
 }
 
-.form-input:focus + .form-icon,
-.form-input:hover + .form-icon{
+.form__input:focus + .form__icon,
+.form__input:hover + .form__icon{
     fill: var(--accent-txt-cl);
 }
 
-.form-textarea {
+.form__textarea {
     height: 120px;
     resize: none;
     padding: 12px 16px;
 }
 /* checkbox */
 
-.form-checkbox{
+.form__checkbox{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -882,21 +898,21 @@ address {
     margin-bottom: 30px;
 }
 
-.form-checkbox-input:checked + .form-check .form-uncheck-icon{
+.checkbox__input:checked + .checkbox__icon.checkbox__icon--uncheck{
     opacity: 0;
 }
 
-.form-checkbox-input:checked+.form-check .form-check-icon {
+.checkbox__input:checked+.checkbox__icon .checkbox__icon--check {
     opacity: 1;
     background-color: var(--accent-txt-cl);
 }
 
-.form-check-icon{
+.checkbox__icon--check{
     opacity: 0;
     transition: opacity var(--anim) background-color var(--anim);
 }
 
-.form-checkbox-label{
+.checkbox__label{
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 14px;
@@ -907,11 +923,11 @@ address {
     text-underline-position: under;
 }
 
-.form-checkbox-label-a{
+.checkbox__label--conditions{
     color: var(--accent-txt-cl);
 }
 
-.form-button {
+.form__btn {
     display: inline-flex;
     align-items: center;
     padding: 10px 52px;
@@ -932,8 +948,8 @@ address {
     border: none;
 }
 
-.form-button:focus,
-.form-button:hover {
+.form__btn:focus,
+.form__btn:hover {
     background-color: var(--btn-bl-cl);
 }
 
