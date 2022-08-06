@@ -115,8 +115,6 @@ address {
     margin-right: auto;
 }
 
-
-
 .nav__list {
     display: flex;
     gap: 50px;
@@ -411,6 +409,7 @@ address {
 }
 
 /* -------------clients----------- */
+
 
 .clients__list {
     display: flex;
@@ -768,7 +767,7 @@ address {
     transition: opacity var(--anim), visibility var(--anim);
 }
 
-.backdrop--is-hidden{
+.backdrop.is-hidden{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -794,12 +793,12 @@ address {
     transition: transform var(--anim), opacity var(--anim);
 }
 
-.backdrop--is-hidden .modal{
+.backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(0.4) rotate(0.25turn);
     opacity: 0;
 }
 
-.modal-btn{
+.modal__btn{
     position: absolute;
     top: 8px;
     right: 8px;
@@ -817,10 +816,9 @@ address {
     transition: fill var(--anim);
 }
 
-.modal-btn:focus,
-.modal-btn:hover{
+.modal__btn:focus,
+.modal__btn:hover{
     fill: var(--accent-txt-cl);
-    
 }
 
 /* Modal form */
