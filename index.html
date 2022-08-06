@@ -34,8 +34,9 @@
 
     <header class="header">
       <div class="container header__container">
+        <a class="logo--black logo header__logo link" href="./index.html"><span>Web</span>Studio</a>
+
         <nav class="nav">
-          <a class="logo header__logo link" href="./index.html"><span>Web</span>Studio</a>
           <ul class="nav__list list">
             <li class="nav__item">
               <a class="nav__link nav__link--current link" href="./index.html">Студія</a>
@@ -175,7 +176,7 @@
       <!-- Чим ми займаємося -->
       <section class="work section">
         <div class="container">
-          <h2 class="work__tittle">Чим ми займаємося</h2>
+          <h2 class="container__tittle">Чим ми займаємося</h2>
           <ul class="work__list list">
             <li class="work__item">
               <img
@@ -213,7 +214,7 @@
       <!-- Наша команда -->
       <section class="team section">
         <div class="container">
-          <h2 class="team__tittle">Наша команда</h2>
+          <h2 class="container__tittle">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item">
               <img
@@ -490,7 +491,7 @@
       <!--постоянные клиенты-->
       <section class="clients section">
         <div class="container">
-          <h2 class="clients__tittle">Постійні клієнти</h2>
+          <h2 class="container__tittle">Постійні клієнти</h2>
           <ul class="clients__list list">
             <li class="clients__item">
               <a
@@ -580,12 +581,14 @@
     <footer class="footer footer__container">
       <div class="container footer__position">
         <div class="adress footer__adress">
-          <a class="adress__link link" href="./index.html">Web<span>Studio</span></a>
+          <a class="footer__logo logo logo--white link" href="./index.html"
+            >Web<span>Studio</span></a
+          >
           <address class="adress__contacts">
             <ul class="adress__list list">
               <li class="adress__item">
                 <a
-                  class="adress__map link"
+                  class="adress__link adress__link--map link"
                   href="https://goo.gl/maps/uckna3FoqXZU8niu8"
                   target="_blank"
                   rel="noreferrer noopener nofollow"
@@ -593,10 +596,10 @@
                 >
               </li>
               <li class="adress__item">
-                <a class="adress__mail link" href="mailto:info@example.com">info@example.com</a>
+                <a class="adress__link link" href="mailto:info@example.com">info@example.com</a>
               </li>
               <li class="adress__item">
-                <a class="adress__tel link" href="tel:+380991111111">+38 099 111 11 11</a>
+                <a class="adress__link link" href="tel:+380991111111">+38 099 111 11 11</a>
               </li>
             </ul>
           </address>
@@ -686,7 +689,7 @@
     </footer>
 
     <!-- Modal window -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop backdrop--is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-icon" width="18" height="18">
