@@ -13,14 +13,15 @@
     color: var(--soc-cl);
     border-radius: 50%;
     transition: color var(--anim), background-color var(--anim);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-txt-cl);
+        color: var(--btn-txt-cl);
+    }
 }
 
 .social__icon {
     fill: currentColor;
 }
 
-.social__link:hover,
-.social__link:focus {
-    background-color: var(--accent-txt-cl);
-    color: var(--btn-txt-cl);
-}

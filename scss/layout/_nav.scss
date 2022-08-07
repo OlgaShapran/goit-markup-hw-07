@@ -21,12 +21,14 @@
     padding-bottom: 32px;
     transition: color var(--anim);
     color: var(--main-txt-cl);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-txt-cl);
+    }
 }
 
-.nav__link:hover,
-.nav__link:focus {
-    color: var(--accent-txt-cl);
-}
+
 
 .nav__link--current {
     position: relative;

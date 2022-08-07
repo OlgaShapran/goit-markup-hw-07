@@ -132,9 +132,10 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     transition: background-color var(--anim);
+
+    &:focus,
+    &:hover {
+        background-color: var(--btn-bl-cl);
+        }
 }
 
-.form__btn:focus,
-.form__btn:hover {
-    background-color: var(--btn-bl-cl);
-}

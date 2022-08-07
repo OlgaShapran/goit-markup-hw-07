@@ -20,13 +20,15 @@
     padding-top: 32px;
     padding-bottom: 32px;
     transition: color var(--anim);
-    color: var(--tel-txt-cl)
+    color: var(--tel-txt-cl);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-txt-cl);
+    }
 }
 
-.contacts__link:hover,
-.contacts__link:focus {
-    color: var(--accent-txt-cl);
-}
+
 
 .contacts__icon {
     fill: currentColor;

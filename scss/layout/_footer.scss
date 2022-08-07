@@ -51,15 +51,15 @@
     letter-spacing: 0.03em;
     transition: color var(--anim);
     color: var(--footer-txt-cl);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-txt-cl);
+    }
 }
 
 .footer__link--map {
     color: var(--white-txt-cl);
-}
-
-.footer__link:hover,
-.footer__link:focus {
-    color: var(--accent-txt-cl);
 }
 
 .footer__contacts {

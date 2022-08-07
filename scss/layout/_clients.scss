@@ -14,14 +14,15 @@
     color: var(--soc-cl);
     border-radius: 4px;
     transition: color var(--anim), border var(--anim);
+    
+    &:focus,
+    &:hover,
+    &:active {
+        color: var(--accent-txt-cl);
+        border: 1px solid var(--accent-txt-cl);
+    }
 }
 
-.clients__link:focus,
-.clients__link:hover,
-.clients__link:active {
-    color: var(--accent-txt-cl);
-    border: 1px solid var(--accent-txt-cl);
-}
 
 .clients__icon {
     fill: currentColor;

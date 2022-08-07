@@ -57,9 +57,10 @@
     color: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: fill var(--anim);
+
+    &:focus,
+    &:hover {
+        fill: var(--accent-txt-cl);
+        }
 }
 
-.backdrop__modal--close:focus,
-.backdrop__modal--close:hover {
-    fill: var(--accent-txt-cl);
-}
