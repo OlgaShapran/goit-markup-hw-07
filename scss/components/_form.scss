@@ -22,10 +22,10 @@
     position: relative;
     display: block;
     margin-bottom: 10px;
-}
 
-.form__wrap:last-child {
-    margin-bottom: 0;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .form__label {
@@ -59,11 +59,11 @@
     padding: 12px;
     padding-left: 42px;
     outline: transparent;
-}
 
-.form__input:focus,
-.form__input:active {
-    border-color: var(--accent-txt-cl);
+    &:focus,
+    &:active {
+        border-color: var(--accent-txt-cl);
+    }
 }
 
 .form__icon {

@@ -26,23 +26,22 @@
     &:focus {
         color: var(--accent-txt-cl);
     }
-}
 
-
-
-.nav__link--current {
+    &--current {
     position: relative;
     color: var(--accent-txt-cl);
+
+    &--current::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--accent-txt-cl);
+        content: '';
+    }
+}
 }
 
-.nav__link--current::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-txt-cl);
-}

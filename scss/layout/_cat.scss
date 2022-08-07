@@ -34,10 +34,11 @@
     &:active {
         background-color: var(--accent-txt-cl);
         }
-}
 
-.cat__btn--active {
+    &--active {
     color: var(--white-txt-cl);
     transform: var(--anim);
     background-color: var(--accent-txt-cl);
 }
+}
+
