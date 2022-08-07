@@ -64,6 +64,11 @@
     &:active {
         border-color: var(--accent-txt-cl);
     }
+
+    &:focus+.form__icon,
+    &:hover+.form__icon {
+        fill: var(--accent-txt-cl);
+    }
 }
 
 .form__icon {
@@ -73,11 +78,6 @@
     left: 12px;
     fill: var(--main-txt-cl);
     transition: fill var(--anim);
-}
-
-.form__input:focus+.form__icon,
-.form__input:hover+.form__icon {
-    fill: var(--accent-txt-cl);
 }
 
 .form__textarea {
@@ -96,18 +96,21 @@
     margin-bottom: 30px;
 }
 
-.form__checkbox-input:checked+.form__checkbox-icon .form__checkbox-icon--uncheck {
-    opacity: 0;
-}
+.form__checkbox-icon--uncheck{
+    .form__checkbox-input:checked+.form__checkbox-icon & {
+        opacity: 0;
+    }
 
-.form__checkbox-input:checked+.form__checkbox-icon .form__checkbox-icon--check {
-    opacity: 1;
-    background-color: var(--accent-txt-cl);
 }
 
 .form__checkbox-icon--check {
     opacity: 0;
     transition: opacity var(--anim) background-color var(--anim);
+
+    .form__checkbox-input:checked+.form__checkbox-icon & {
+        opacity: 1;
+        background-color: var(--accent-txt-cl);
+        }
 }
 
 .form__checkbox-label {
@@ -119,10 +122,10 @@
     color: var(--tel-txt-cl);
     user-select: none;
     text-underline-position: under;
-}
 
-.form__checkbox-label--conditions {
-    color: var(--accent-txt-cl);
+    &--conditions {
+        color: var(--accent-txt-cl);
+    }
 }
 
 .form__btn {
